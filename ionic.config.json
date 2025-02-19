@@ -1,0 +1,7 @@
+{
+  "name": "evaluacion-pragma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

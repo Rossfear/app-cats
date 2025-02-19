@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Catsbreeds
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <ion-searchbar 
+    [value]="searchTerm" 
+    (ionChange)="filterCats()" 
+    placeholder="Buscar razas de gatos"
+  ></ion-searchbar>
+
+
+  <ion-grid *ngIf="loading">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-spinner name="crescent"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div id="container" *ngIf="!loading">
+
+    <app-articlecat [cat]="cats">
+    </app-articlecat>
+
+    <ion-infinite-scroll 
+      threshold="25%" 
+      position="bottom" 
+      (ionInfinite)="loadData()"
+    >
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="cargando...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    
+  </div>
+</ion-content>

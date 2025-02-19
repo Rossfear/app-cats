@@ -1,0 +1,50 @@
+.img-cat {
+    width: 100%;
+    height: 100%;    
+    object-fit: fill;
+}
+
+.fixed-image {
+    position: fixed;
+    justify-self: anchor-center;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.fixed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+
+.cont-scroll {
+    margin-top: 330px; 
+    height: calc(100vh - 370px);
+    overflow-y: auto;
+}
+
+
+.item-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-col {
+    display: flex;
+    flex-direction: column;
+    height: 100px ;
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+    justify-content: center;
+
+}
+
+
+
+ion-col {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}

@@ -1,0 +1,58 @@
+
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col 
+      size="12"
+      size-lg="3"
+      size-md="4"
+      size-sm="6"
+      size-xs="12"
+      *ngFor="let gato of cat; let i = index"
+    >      
+      <ion-card
+        class="card-cat"
+      >
+        <ion-card-header>
+          <ion-toolbar>
+            <ion-card-title>{{gato.name}}</ion-card-title>            
+            <ion-buttons slot="end">
+              <ion-button (click)="navigateToDetails(gato)">
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-card-header>
+
+        <ion-card-content
+          class="card-content"
+        >
+          <ion-img 
+            [src]="gato.image.url" 
+            class="img-cat"
+          >
+          </ion-img>
+        </ion-card-content>
+
+        <ion-footer>    
+          <ion-toolbar>
+            
+            <div class="tool-bar-detail">
+              <ion-label> Origin: {{gato.origin}} </ion-label>
+              <ion-label>Intelligence: {{gato.intelligence}} </ion-label>
+            </div>
+            
+            <ion-buttons slot="end">
+              <ion-button>
+                <ion-icon name="heart"></ion-icon>
+              </ion-button>
+              <ion-button>
+                <ion-icon name="share"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-footer>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
