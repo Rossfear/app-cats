@@ -30,3 +30,8 @@
     padding-left: 10px !important;
     padding-right: 10px !important;
 }
+
+ion-toolbar {
+    --box-shadow: none;
+    --border-width: 0;
+  }
