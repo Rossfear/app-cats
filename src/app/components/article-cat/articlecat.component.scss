@@ -32,6 +32,6 @@
 }
 
 ion-toolbar {
-    --box-shadow: none;
-    --border-width: 0;
+    --box-shadow: none !important;
+    --border-width: 0 !important;
   }
