@@ -1,1 +1,5 @@
 
+ion-header, ion-footer {
+    padding-top: env(safe-area-inset-top);    /* Para el notch superior */
+    padding-bottom: env(safe-area-inset-bottom); /* Para el notch inferior */
+  }
